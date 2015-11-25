@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.alfresco</groupId>
     <artifactId>alfresco-trashcan-cleaner</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2.0.1-SNAPSHOT</version>
     <name>Alfresco Trashcan Cleaner</name>
     <description>This library adds a scheduled job that will empty your Alfresco trashcan according to configuration.</description>
     <packaging>pom</packaging>    
@@ -11,7 +11,7 @@
     <parent>
         <groupId>org.alfresco.maven</groupId>
         <artifactId>alfresco-sdk-parent</artifactId>
-        <version>1.0</version>
+        <version>1.1.1</version>
     </parent>
     
     <!-- 
@@ -20,18 +20,17 @@
        | For more available properties see the alfresco-sdk-parent POM. 
        -->
     <properties>
-        <alfresco.groupId>org.alfresco</alfresco.groupId>
-        <alfresco.version>4.2.b</alfresco.version>
+        <alfresco.groupId>org.alfresco.enterprise</alfresco.groupId>
+        <alfresco.version>4.1.2</alfresco.version>
         <app.log.root.level>WARN</app.log.root.level>
         <alfresco.db.host>localhost</alfresco.db.host>
-        <alfresco.db.port>3306</alfresco.db.port>
-        <alfresco.db.driver>org.gjt.mm.mysql.Driver</alfresco.db.driver>
+        <alfresco.db.port>5432</alfresco.db.port>
+        <alfresco.db.driver>org.postgresql.Driver</alfresco.db.driver>
         <alfresco.db.name>alfresco</alfresco.db.name>
-        <alfresco.db.username>root</alfresco.db.username>
+        <alfresco.db.username>admin</alfresco.db.username>
         <alfresco.db.password></alfresco.db.password>
-        <alfresco.db.url>jdbc:mysql://${alfresco.db.host}:${alfresco.db.port}/${alfresco.db.name}</alfresco.db.url>
-        <alfresco.db.hibernate.dialect>org.hibernate.dialect.MySQLInnoDBDialect</alfresco.db.hibernate.dialect>
-        <alfresco.data.location>alf_data_dev</alfresco.data.location>
+        <alfresco.db.url>jdbc:postgresql://${alfresco.db.host}:${alfresco.db.port}/${alfresco.db.name}</alfresco.db.url>
+        <alfresco.data.location>C:/Alfresco/alf_data</alfresco.data.location>
         <!-- This controls which properties will be picked in src/test/properties for embedded run -->
         <env>local</env>
     </properties>
@@ -71,6 +70,14 @@
             </snapshots>
         </repository>
     </repositories>
+	
+	<scm>
+        <connection>scm:git:git@github.com:ioppublishing/alfresco-trashcan-cleaner.git</connection>
+        <url>scm:git:git@github.com:ioppublishing/alfresco-trashcan-cleaner.git</url>
+        <developerConnection>scm:git:git@github.com:ioppublishing/alfresco-trashcan-cleaner.git</developerConnection>
+        <tag>release-1.2.0.0</tag>
+    </scm>
+	
   <modules>
     <module>alfresco-trashcan-cleaner-amp</module>
     <module>alfresco</module>
