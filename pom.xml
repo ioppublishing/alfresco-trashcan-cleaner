@@ -59,15 +59,19 @@
     -->
     <repositories>
         <repository>
-            <id>alfresco-artifacts</id>
+            <id>alfresco-public</id>
             <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
         </repository>
         <repository>
-            <id>alfresco-artifacts-snapshots</id>
+            <id>alfresco-public-snapshots</id>
             <url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
             <snapshots>
                 <updatePolicy>never</updatePolicy>
             </snapshots>
+        </repository>
+		<repository>
+            <id>alfresco-private-repository</id>
+            <url>https://artifacts.alfresco.com/nexus/content/groups/private</url>
         </repository>
     </repositories>
 	

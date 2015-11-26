@@ -9,7 +9,7 @@
     <parent>
         <groupId>org.alfresco</groupId>
         <artifactId>alfresco-trashcan-cleaner</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.2.0.1-SNAPSHOT</version>
     </parent>
 
     <!--
@@ -44,5 +44,20 @@
          -->
         <alfresco.client.war>alfresco</alfresco.client.war>
     </properties>
-    
+
+    <distributionManagement>
+        <repository>
+            <id>internal.release</id>
+            <name>Internal Releases</name>
+            <url>http://coriolis.ioppublishing.com:8081/nexus/content/repositories/releases</url>
+            <uniqueVersion>false</uniqueVersion>
+        </repository>
+        <snapshotRepository>
+            <id>internal.snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://coriolis.ioppublishing.com:8081/nexus/content/repositories/snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
