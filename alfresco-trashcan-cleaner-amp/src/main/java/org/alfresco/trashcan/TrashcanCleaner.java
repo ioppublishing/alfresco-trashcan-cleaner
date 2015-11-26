@@ -99,6 +99,10 @@ public class TrashcanCleaner {
 			return true;
 		Date archivedDate = (Date) nodeService.getProperty(node,
 				ContentModel.PROP_ARCHIVED_DATE);
+		if (archivedDate == null){
+			logger.warn("node has null archived date: "+node);
+			return false;
+		}
 		return daysToKeep * DAYS_TO_MILLIS < System.currentTimeMillis()
 				- archivedDate.getTime();
 	}
