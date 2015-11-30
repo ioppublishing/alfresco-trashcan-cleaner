@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.alfresco</groupId>
     <artifactId>alfresco-trashcan-cleaner</artifactId>
-    <version>1.2.0.1-SNAPSHOT</version>
+    <version>1.2.0.1</version>
     <name>Alfresco Trashcan Cleaner</name>
     <description>This library adds a scheduled job that will empty your Alfresco trashcan according to configuration.</description>
     <packaging>pom</packaging>    
@@ -28,7 +28,7 @@
         <alfresco.db.driver>org.postgresql.Driver</alfresco.db.driver>
         <alfresco.db.name>alfresco</alfresco.db.name>
         <alfresco.db.username>admin</alfresco.db.username>
-        <alfresco.db.password></alfresco.db.password>
+        <alfresco.db.password />
         <alfresco.db.url>jdbc:postgresql://${alfresco.db.host}:${alfresco.db.port}/${alfresco.db.name}</alfresco.db.url>
         <alfresco.data.location>C:/Alfresco/alf_data</alfresco.data.location>
         <!-- This controls which properties will be picked in src/test/properties for embedded run -->
