@@ -113,13 +113,13 @@
         <repository>
             <id>internal.release</id>
             <name>Internal Releases</name>
-            <url>http://coriolis.ioppublishing.com:8081/nexus/content/repositories/releases</url>
+            <url>http://kundt.ioppublishing.com:8081/nexus/content/repositories/releases</url>
             <uniqueVersion>false</uniqueVersion>
         </repository>
         <snapshotRepository>
             <id>internal.snapshots</id>
             <name>Internal Snapshots</name>
-            <url>http://coriolis.ioppublishing.com:8081/nexus/content/repositories/snapshots</url>
+            <url>http://kundt.ioppublishing.com:8081/nexus/content/repositories/snapshots</url>
             <uniqueVersion>false</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
