@@ -37,6 +37,8 @@
         <alfresco.client.war.version>4.2.0</alfresco.client.war.version>
         <!-- This controls which properties will be picked in src/test/properties for embedded run -->
         <env>local</env>
+        <!-- Sonar plugins -->
+        <sonar.host.url>https://sonar.iop.org/</sonar.host.url>
     </properties>
 
     <!-- Here we realize the connection with the Alfresco selected platform 
@@ -98,4 +100,13 @@
             <url>https://artifacts.alfresco.com/nexus/content/groups/private</url>
         </repository>
     </repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.4.0.905</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
